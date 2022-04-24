@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
     <title>Counter</title>
@@ -12,13 +13,17 @@
     <div class="header">
         <div class="user-input">
             <input type="date" id="input_date"  placeholder="dd-mm-yyyy">
-            <input type="time" id="input_time" placeholder="-- : -- --">
+            <input type="time" id="input_time"  placeholder="-- : -- --">
         </div>
         <div class="buttons" >
-        <button type="button" id="submit" class="set">Set</button>
-        <button type="button" id="submit" class="start">start</button>
-        <button type="button" id="submit" class="stop">stop</button>
-        <button type="button" id="submit" class="reset">Reset</button>
+        <button type="button" id="submit" class="set"><span class="material-symbols-outlined">
+            done_outline
+            </span></button>
+        <button type="button" id="submit" class="start"><span class="material-symbols-outlined" id ="start_play">play_circle</span></button>
+        <!-- <button type="button" id="submit" class="stop"><span class="material-symbols-outlined"><span class="material-symbols-outlined">
+            pause
+            </span></span></button> -->
+        <button type="button" id="submit" class="reset"><span class="material-symbols-outlined">replay</span></button>
     </div>
     </div>
     <div class="box">
@@ -51,11 +56,17 @@
 var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 var yyyy = today.getFullYear();
+var hh = String(today.getHours());
+var mi = String(today.getMinutes());
+var ss = String(today.getSeconds());
+var ms = String(today.getMilliseconds()%60);
 
 today =  yyyy+'-'+mm+'-'+dd;
-console.log(today);
+todayTime = hh +':'+mi+':'+ss+'.'+ms;
+// let tm = document.getElementById('input_time').min;
+// console.log(tm);
          $('#input_date').attr('min', today);
-    });
+             });
 </script>
 </body>
 </html>

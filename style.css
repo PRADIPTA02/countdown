@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+
     box-sizing: border-box;
 
 }
@@ -61,11 +62,6 @@ h1{
 .countdown-el span{
     font-size:1rem;
 }
-.countdown-el p{
-    /* border-right: 2px solid green;
-    padding: 0 10px 0 0; */
-    /* overflow-wrap: wrap; */
-}
 .countdown-el.seconds-c{
 border-right : none;
 }
@@ -83,6 +79,14 @@ input[type='time']{
     color: #fff;
     border-radius: 5px;
     width:10rem;
+}
+input[type='date']:active{
+    background-color: #2a549c;
+
+}
+input[type='time']:active{
+    background-color: #2a549c;
+
 }
 #input_date{
     padding:1rem;
@@ -133,17 +137,31 @@ input[type='date']:after {
 @media screen and (min-width: 763px) {
     .box{
         /* min-width: auto; */
-        margin-left: -10rem;
         justify-content:right;
         box-shadow: 0 10px 25px rgba(92,99,105,.4);
         border-radius:5px;
+        transform:scale(-50% -50%);
     }
     .big-text{
         font-size:3rem;
         line-height: 1;
         margin: 0 2rem;
     }
+    .countdown-container{
+        width:auto;
+        height: 5rem;
+        display: flex;
+        /* flex-wrap: wrap; */
+    }
     h1{
         font-size:2rem;
+    }
+    input[type='time']:after {
+        color: #ffffff;
+        content: none;
+    }
+    input[type='date']:after {
+        color: #ffffff;
+        content: none;
     }
   }
