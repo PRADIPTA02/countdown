@@ -134,6 +134,39 @@ input[type='date']:after {
     position:absolute;
     top:35rem;
 }
+.logInfo-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:2rem;
+}
+.logInfo{
+    height: 17rem;
+    background-color: rgb(135, 133, 133);
+    width: 20rem;
+    margin-top:-9rem ;
+    border-radius: 5px;
+    color: #ffffff;
+    padding:1rem;
+    overflow: hidden;
+    overflow-y: scroll;
+    
+}
+.logControlBtn{
+    padding: .23rem 0rem 0rem 13.70rem;
+    /* background-color:red; */
+
+}
+#logc{
+    width: 3rem;
+    height: 2rem;
+    border :none;
+    outline : none;
+    background-color:#0080ff;
+    border-radius: 5px;
+}
+#logc:hover{
+    background-color : #588fef;
+}
 @media screen and (min-width: 763px) {
     .box{
         /* min-width: auto; */
@@ -163,5 +196,44 @@ input[type='date']:after {
     input[type='date']:after {
         color: #ffffff;
         content: none;
+    }
+    .logInfo-container{
+        display: flex;
+        flex-direction: column;
+        margin-bottom:2rem;
+    }
+    .logInfo{
+        height: 17rem;
+        background-color: rgb(135, 133, 133);
+        width: 20rem;
+        margin-top:-9rem ;
+        border-radius: 5px;
+        color: #ffffff;
+        padding:1rem;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+    .logControlBtn{
+        padding: .23rem 0rem 0rem 13.70rem;
+        /* background-color:red; */
+
+    }
+    #logc{
+        width: 3rem;
+        height: 2rem;
+        border :none;
+        outline : none;
+        background-color:#0080ff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #logc:hover{
+        background-color : #588fef;
+    }
+    .logs{
+        color: rgb(232, 222, 222);
+        display: flex;
+        padding-left: 2rem;
+        gap:1rem;
     }
   }
